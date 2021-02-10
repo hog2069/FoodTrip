@@ -15,6 +15,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
 import java.util.ArrayList;
 
@@ -22,7 +23,10 @@ public class Tab1Fragment extends Fragment {
 
     RecyclerView recyclerView;
     Tab1Adapter adapter;
+    PagerAdapter pagerAdapter;
+    ViewPager pager;
     ArrayList<Item> items = new ArrayList<Item>();
+    ArrayList<Integer> item = new ArrayList<>();
 
 
     @Override
@@ -35,6 +39,12 @@ public class Tab1Fragment extends Fragment {
         items.add(new Item("가게 설명, 정보","주소", R.drawable.fish));
         items.add(new Item("가게 설명, 정보","주소", R.drawable.jokbar));
         items.add(new Item("가게 설명, 정보","주소",R.drawable.pizza));
+        ///////////////////////////////////////////////////////////////////////////
+        item.add(R.drawable.food1);
+        item.add(R.drawable.food2);
+        item.add(R.drawable.food3);
+        item.add(R.drawable.food4);
+        item.add(R.drawable.food5);
 
 
 
@@ -69,9 +79,14 @@ public class Tab1Fragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
         recyclerView=view.findViewById(R.id.recycler);
         adapter= new Tab1Adapter(getActivity(),items);
         recyclerView.setAdapter(adapter);
+        ////////////////////////////////////////////////////
+        pager=view.findViewById(R.id.pager);
+        pagerAdapter= new PagerAdapter(getActivity(),item);
+        pager.setAdapter(pagerAdapter);
 
 
         Toolbar toolbar= view.findViewById(R.id.toolbar);

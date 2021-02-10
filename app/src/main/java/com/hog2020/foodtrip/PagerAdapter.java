@@ -1,0 +1,55 @@
+package com.hog2020.foodtrip;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+
+import androidx.annotation.NonNull;
+
+import java.util.ArrayList;
+
+public class PagerAdapter extends androidx.viewpager.widget.PagerAdapter {
+
+    Context context;
+    ArrayList<Integer> img;
+
+
+    public PagerAdapter(Context context, ArrayList<Integer> img) {
+        this.context = context;
+        this.img = img;
+    }
+
+    @Override
+    public int getCount() {
+        return img.size();
+    }
+
+    @NonNull
+    @Override
+    public Object instantiateItem(@NonNull ViewGroup container, int position) {
+        LayoutInflater inflater = LayoutInflater.from(context);
+        View pager =inflater.inflate(R.layout.pager,null);
+
+        ImageView iv = pager.findViewById(R.id.iv);
+
+        iv.setImageResource(img.get(position));
+
+        container.addView(pager);
+
+        return pager;
+    }
+
+    @Override
+    public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
+
+        container.removeView((View)object);
+
+    }
+
+    @Override
+    public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
+        return view == object;
+    }
+}
