@@ -22,7 +22,7 @@ public class ClickPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_click_page);
 
-        iv=findViewById(R.id.iv);
+        iv=findViewById(R.id.iv_click);
         tv=findViewById(R.id.tv);
 
         Intent intent =getIntent();

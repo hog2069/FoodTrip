@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="4dp"
+    android:layout_margin="8dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_topimg"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+        <TextView
+            android:id="@+id/tv_topname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="가게이름"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/iv_topimg"
+            android:layout_marginLeft="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_topinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_topname"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="45dp"
+            android:layout_toRightOf="@id/iv_topimg"
+            android:text="대표 음식 이름"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_topheart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/iv_toptalk"
+            android:layout_alignBottom="@id/tv_topinfo"
+            android:layout_margin="4dp"/>
+
+        <ImageView
+            android:id="@+id/iv_toptalk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_topinfo"
+            android:layout_alignParentRight="true"
+            android:layout_margin="4dp"/>
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

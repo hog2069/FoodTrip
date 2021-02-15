@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Clickpage2">
+
+
+    <ImageView
+        android:id="@+id/iv_clickimg"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="48dp"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="가게 이름"
+        android:layout_below="@id/iv_clickimg"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="가게정보"
+        android:layout_below="@id/tv_name"
+        android:layout_centerInParent="true"/>
+
+    <ImageView
+        android:id="@+id/iv_heart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_heart_black"
+        android:layout_below="@id/tv_info"
+        android:layout_centerInParent="true"
+        android:layout_alignLeft="@id/iv_clickimg"/>
+
+    <ImageView
+        android:id="@+id/iv_talk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_baseline_question_answer_24"
+        android:layout_below="@id/tv_info"
+        android:layout_centerInParent="true"
+        android:layout_alignRight="@id/iv_clickimg"/>
+
+
+
+</RelativeLayout>
