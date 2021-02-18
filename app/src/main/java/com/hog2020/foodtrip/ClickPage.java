@@ -14,25 +14,27 @@ import com.bumptech.glide.Glide;
 
 public class ClickPage extends AppCompatActivity {
 
-    ImageView iv;
-    TextView tv;
+    ImageView ivclick;
+    TextView tvname;
+    TextView tvinfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_click_page);
 
-        iv=findViewById(R.id.iv_click);
-        tv=findViewById(R.id.tv);
+        ivclick=findViewById(R.id.iv_img1);
+        tvname=findViewById(R.id.tv_name1);
+        tvinfo=findViewById(R.id.tv_info1);
 
         Intent intent =getIntent();
         int img =intent.getIntExtra("img",R.drawable.foodimg);
 
-        Glide.with(this).load(img).into(iv);
+        Glide.with(this).load(img).into(ivclick);
 
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
-            iv.setTransitionName("img");
+            ivclick.setTransitionName("img");
         }
 
 

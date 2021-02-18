@@ -1,6 +1,7 @@
 package com.hog2020.foodtrip;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -14,8 +15,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
+
+import com.google.android.gms.maps.GoogleMap;
 
 import java.util.ArrayList;
 
@@ -64,12 +68,16 @@ public class Tab1Fragment extends Fragment {
         super.onCreateOptionsMenu(menu, inflater);
     }
 
+
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
         switch (item.getItemId()){
             case R.id.menu_serach:
             Toast.makeText(getActivity(), "지도 페이지 이동", Toast.LENGTH_SHORT).show();
+                Intent intent =new Intent(getActivity(),MapActivity.class);
+                startActivity(intent);
+
             break;
         }
 

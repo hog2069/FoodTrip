@@ -10,13 +10,26 @@
 
 
     <ImageView
-        android:id="@+id/iv_click"
+        android:id="@+id/iv_img1"
         android:layout_width="match_parent"
         android:layout_height="300dp"/>
 
     <TextView
-        android:id="@+id/tv"
+        android:id="@+id/tv_name1"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:gravity="center"
+        android:text="가게이름"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tv_info1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="가게이름, 음식 종류, 주소, 전화번호, 설명"/>
+        android:gravity="center"
+        android:text="가게 정보"/>
+
+
 </LinearLayout>

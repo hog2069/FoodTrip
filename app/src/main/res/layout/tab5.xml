@@ -1,13 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+    
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_user"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:background="@mipmap/ic_user"
+        android:layout_gravity="center"/>
 
+    <Button
+        android:id="@+id/clickset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="수정"
+        android:backgroundTint="#FF9800"
+        android:layout_gravity="right"/>
 
-    <TextView
+    <Button
+        android:id="@+id/tv_set"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="tab5"
-        android:textSize="20sp"/>
+        android:layout_height="wrap_content"
+        android:text="설정"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white" />
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/tv_myhouse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="내가 등록한 식당"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"/>
+
+
+    
+
+</LinearLayout>

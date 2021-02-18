@@ -1,8 +1,5 @@
 package com.hog2020.foodtrip;
 
-import android.view.LayoutInflater;
-import android.view.ViewGroup;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -17,8 +14,8 @@ public class Tab2tabAdapter extends FragmentPagerAdapter {
     public Tab2tabAdapter(@NonNull FragmentManager fm, int behavior) {
         super(fm, behavior);
 
-        fragments[0]= new New();
-        fragments[1]= new Top();
+        fragments[0]= new NewTab2Fragment();
+        fragments[1]= new TopTab2Fragment();
 
     }
 

@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class Top extends Fragment {
+public class TopTab2Fragment extends Fragment {
 
     RecyclerView recyclerView;
     TopAdapter adapter;
