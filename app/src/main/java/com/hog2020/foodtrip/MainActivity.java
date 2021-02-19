@@ -2,10 +2,14 @@ package com.hog2020.foodtrip;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -28,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
         fragments[0]= new Tab1Fragment();
         tran.add(R.id.container,fragments[0]);
         tran.commit();
+
+
 
         bnv=findViewById(R.id.bnv);
 
@@ -80,6 +86,19 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+
+
+
+        //퍼미션
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+            if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION)==PackageManager.PERMISSION_DENIED){
+                String[] permission = new String[]{Manifest.permission.ACCESS_FINE_LOCATION,Manifest.permission.WRITE_EXTERNAL_STORAGE};
+                requestPermissions(permission,0);
+            }
+        }
+
+
+
     }
 
 }

@@ -25,6 +25,7 @@ public class Tab2NewAdapter extends RecyclerView.Adapter {
     Context context;
     ArrayList<FooddataItem> items;
 
+
     public Tab2NewAdapter(Context context, ArrayList<FooddataItem> items) {
         this.context = context;
         this.items = items;
@@ -35,7 +36,7 @@ public class Tab2NewAdapter extends RecyclerView.Adapter {
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
 
-        View itemView = inflater.inflate(R.layout.new_recycleritem,parent,false);
+        View itemView = inflater.inflate(R.layout.newitem,parent,false);
         VH vh = new VH(itemView);
         return vh;
     }
@@ -72,36 +73,30 @@ public class Tab2NewAdapter extends RecyclerView.Adapter {
         public VH(@NonNull View itemView) {
             super(itemView);
 
-            iv= itemView.findViewById(R.id.iv_new);
-            tvname=itemView.findViewById(R.id.tv_name);
-            tvinfo=itemView.findViewById(R.id.tv_info);
-            tvphone=itemView.findViewById(R.id.tv_phone);
+            iv= itemView.findViewById(R.id.iv_item);
+            tvname=itemView.findViewById(R.id.tv_Item1);
+            tvinfo=itemView.findViewById(R.id.tv_Item2);
+            tvphone=itemView.findViewById(R.id.tv_Item3);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     int position = getLayoutPosition();
-                    String name = items.get(position).name;
-                    String info = items.get(position).address;
-                    String phone= items.get(position).number;
-                    String image =items.get(position).image;
 
-//                    Intent intent = new Intent(context,NewTab2Fragment.class);
-//                    intent.putExtra("name",name);
-//                    intent.putExtra("address",info);
-//                    intent.putExtra("number",phone);
-//                    intent.putExtra("image",image);
-//
-//                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
-//                        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation((Activity) context, new Pair<View,String>(iv,"no"));
-//                        context.startActivity(intent,options.toBundle());
-//                    }else {
-//                        context.startActivity(intent);
-//                    }
+                    String image = items.get(position).image;
+                    String name =items.get(position).name;
+                    String info= items.get(position).address;
+                    String phone=items.get(position).number;
+
+                    Intent intent = new Intent(context,NewClickActivity.class);
+                    intent.putExtra("image",image);
+                    intent.putExtra("name",name);
+                    intent.putExtra("info",info);
+                    intent.putExtra("phone",phone);
+
+                    context.startActivity(intent);
 
 
-                    //MainActivity 에서 동적 퍼미션 작업 다하기
-                    //탭 3번 데이터 저장후 지워지게게 하기
                 }
             });
        }

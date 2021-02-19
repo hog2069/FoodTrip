@@ -20,6 +20,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.loader.content.CursorLoader;
 
 import com.bumptech.glide.Glide;
@@ -105,24 +106,28 @@ public class Tab3Fragment extends Fragment {
                     @Override
                     public void onResponse(Call<String> call, Response<String> response) {
                         String s = response.body();
-                        Toast.makeText(getContext(), "테스트"+s, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), "성공"+s, Toast.LENGTH_SHORT).show();
+
+                        //Tab2로 이동하도록.. MainActivity의 BNV를 제어
+                        ((MainActivity)getActivity()).bnv.setSelectedItemId(R.id.bnv_tab2);
+
+                        etname.setText("");
+                        etaddress.setText("");
+                        etnumber.setText("");
+                        Glide.with(getActivity()).load("").into(iv);
+
                     }
 
                     @Override
                     public void onFailure(Call<String> call, Throwable t) {
-                        Toast.makeText(getContext(), "에러"+t.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), "실패"+t.getMessage(), Toast.LENGTH_SHORT).show();
 
                     }
                 });
 
-                //Tab2로 이동하도록.. MainActivity의 BNV를 제어
-                ((MainActivity)getActivity()).bnv.setSelectedItemId(R.id.bnv_tab2);
 
             }
         });
-
-        //남아 있는 데이터 지워지도록
-
 
     }
 
