@@ -20,7 +20,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodTrip"
         android:usesCleartextTraffic="true">
-        <activity android:name=".NewClickActivity"></activity>
+        <activity android:name=".Tab4ClickActivity"></activity>
+        <activity android:name=".NewClickActivity" />
         <activity android:name=".MapActivity" />
         <activity android:name=".Clickpage2" />
         <activity android:name=".ClickPage" />
