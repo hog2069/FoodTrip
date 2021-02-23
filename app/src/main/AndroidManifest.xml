@@ -12,6 +12,7 @@
         android:required="true" />
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_user"
         android:label="@string/app_name"
@@ -20,18 +21,32 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodTrip"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Tab4ClickActivity"></activity>
+
+        <activity android:name=".Tab4ClickActivity" />
         <activity android:name=".NewClickActivity" />
         <activity android:name=".MapActivity" />
         <activity android:name=".Clickpage2" />
         <activity android:name=".ClickPage" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".LoginActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+
+            <!-- Redirect URI: "kakao{NATIVE_APP_KEY}://oauth“ -->
+            <data android:host="oauth"
+                android:scheme="kakaobdebacb54988236e9d0217a766244027" />
+        </intent-filter>
+    </activity>
 
         <meta-data
             android:name="com.google.android.gms.version"

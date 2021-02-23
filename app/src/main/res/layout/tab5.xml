@@ -6,7 +6,7 @@
     android:padding="16dp">
     
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/iv_user"
+        android:id="@+id/crv"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginTop="20dp"
@@ -14,7 +14,7 @@
         android:layout_gravity="center"/>
 
     <Button
-        android:id="@+id/clickset"
+        android:id="@+id/set1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="수정"
@@ -22,7 +22,7 @@
         android:layout_gravity="right"/>
 
     <Button
-        android:id="@+id/tv_set"
+        android:id="@+id/set2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="설정"
@@ -30,7 +30,7 @@
         android:backgroundTint="@color/white" />
 
     <Button
-        android:id="@+id/tv_myhouse"
+        android:id="@+id/set3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="내가 등록한 식당"
