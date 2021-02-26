@@ -20,6 +20,7 @@
                 android:layout_height="wrap_content"
                 android:text="현재 위치"
                 android:textSize="16sp"
+                android:textColor="@color/white"
                 android:layout_marginStart="64dp"/>
 
         </androidx.appcompat.widget.Toolbar>
@@ -39,11 +40,20 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이벤트"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textColor="#FF9800"/>
+
 
             <androidx.viewpager.widget.ViewPager
                 android:id="@+id/pager"
                 android:layout_width="match_parent"
-                android:layout_height="160dp" />
+                android:layout_height="160dp"
+                android:layout_margin="8dp"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler"

@@ -13,6 +13,21 @@
         android:background="@mipmap/ic_user"
         android:layout_gravity="center"/>
 
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="이름"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="email"
+        android:gravity="center"/>
+
     <Button
         android:id="@+id/set1"
         android:layout_width="wrap_content"
@@ -33,7 +48,7 @@
         android:id="@+id/set3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="내가 등록한 식당"
+        android:text="먹방 동영상"
         android:textColor="@color/black"
         android:backgroundTint="@color/white"/>
 

@@ -8,22 +8,22 @@ import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 
+
 import java.util.ArrayList;
 
 public class PagerAdapter extends androidx.viewpager.widget.PagerAdapter {
 
     Context context;
-    ArrayList<Integer> img;
+    ArrayList<Integer> image;
 
-
-    public PagerAdapter(Context context, ArrayList<Integer> img) {
+    public PagerAdapter(Context context, ArrayList<Integer> image) {
         this.context = context;
-        this.img = img;
+        this.image = image;
     }
 
     @Override
     public int getCount() {
-        return img.size();
+        return image.size();
     }
 
     @NonNull
@@ -32,13 +32,13 @@ public class PagerAdapter extends androidx.viewpager.widget.PagerAdapter {
         LayoutInflater inflater = LayoutInflater.from(context);
         View pager =inflater.inflate(R.layout.pager,null);
 
-        ImageView iv = pager.findViewById(R.id.iv);
-
-        iv.setImageResource(img.get(position));
+        ImageView videoImage = pager.findViewById(R.id.videoImage);
+        videoImage.setImageResource(image.get(position));
 
         container.addView(pager);
 
         return pager;
+
     }
 
     @Override
@@ -52,4 +52,6 @@ public class PagerAdapter extends androidx.viewpager.widget.PagerAdapter {
     public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
         return view == object;
     }
+
+
 }

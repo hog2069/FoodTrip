@@ -1,8 +1,9 @@
 package com.hog2020.foodtrip;
 
-import android.content.Context;
+
 import android.content.Intent;
 import android.os.Bundle;
+
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -15,11 +16,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
-import com.google.android.gms.maps.GoogleMap;
 
 import java.util.ArrayList;
 
@@ -30,7 +29,10 @@ public class Tab1Fragment extends Fragment {
     PagerAdapter pagerAdapter;
     ViewPager pager;
     ArrayList<Item> items = new ArrayList<Item>();
-    ArrayList<Integer> item = new ArrayList<>();
+    ArrayList<Integer> image= new ArrayList<>();
+
+
+
 
 
     @Override
@@ -38,19 +40,17 @@ public class Tab1Fragment extends Fragment {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
 
-        items.add(new Item("가게 설명, 정보","주소", R.drawable.chicken));
-        items.add(new Item("가게 설명, 정보","주소", R.drawable.chinafood));
-        items.add(new Item("가게 설명, 정보","주소", R.drawable.fish));
-        items.add(new Item("가게 설명, 정보","주소", R.drawable.jokbar));
-        items.add(new Item("가게 설명, 정보","주소",R.drawable.pizza));
-        ///////////////////////////////////////////////////////////////////////////
-        item.add(R.drawable.food1);
-        item.add(R.drawable.food2);
-        item.add(R.drawable.food3);
-        item.add(R.drawable.food4);
-        item.add(R.drawable.food5);
+        items.add(new Item("삼겹살","양평동", R.drawable.food01));
+        items.add(new Item("떡볶이","성수동", R.drawable.food02));
+        items.add(new Item("불닭치즈","화곡동", R.drawable.food03));
+        items.add(new Item("와플치킨","상도동", R.drawable.food04));
+        items.add(new Item("소곱창","노량진동", R.drawable.food05));
+        items.add(new Item("빈대떡","은천동", R.drawable.food06));
+        items.add(new Item("곱창떡볶이","신림동", R.drawable.food07));
+        items.add(new Item("연어덮밥","대림동", R.drawable.food08));
 
-
+        image.add(new Integer(R.drawable.event));
+        image.add(new Integer(R.drawable.event2));
 
     }
 
@@ -93,7 +93,7 @@ public class Tab1Fragment extends Fragment {
         recyclerView.setAdapter(adapter);
         ////////////////////////////////////////////////////
         pager=view.findViewById(R.id.pager);
-        pagerAdapter= new PagerAdapter(getActivity(),item);
+        pagerAdapter= new PagerAdapter(getActivity(),image);
         pager.setAdapter(pagerAdapter);
 
 
@@ -103,6 +103,7 @@ public class Tab1Fragment extends Fragment {
         ((MainActivity)getActivity()).getSupportActionBar().setDisplayShowTitleEnabled(false);
 
     }
+
 
 }
 

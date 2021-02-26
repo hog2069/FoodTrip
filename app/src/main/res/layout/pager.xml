@@ -3,8 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     
-    <ImageView
-        android:id="@+id/iv"
+    <com.google.android.youtube.player.YouTubeThumbnailView
+        android:id="@+id/videoImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 

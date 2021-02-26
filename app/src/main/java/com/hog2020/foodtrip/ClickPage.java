@@ -30,7 +30,12 @@ public class ClickPage extends AppCompatActivity {
         Intent intent =getIntent();
         int img =intent.getIntExtra("img",R.drawable.foodimg);
 
+        String name = intent.getStringExtra("house");
+        String info =intent.getStringExtra("address");
         Glide.with(this).load(img).into(ivclick);
+
+        tvname.setText(name);
+        tvinfo.setText(info);
 
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){

@@ -16,7 +16,6 @@ public class NewClickActivity extends AppCompatActivity {
 
     ImageView iv;
     TextView tv1,tv2,tv3;
-    ArrayList<FooddataItem> items;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
