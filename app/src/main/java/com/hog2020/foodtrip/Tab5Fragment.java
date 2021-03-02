@@ -74,6 +74,14 @@ public class Tab5Fragment extends Fragment {
             }
         });
 
+        set2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),SetActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         set3.setOnClickListener(new View.OnClickListener() {
             @Override

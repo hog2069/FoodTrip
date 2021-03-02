@@ -21,7 +21,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodTrip"
         android:usesCleartextTraffic="true">
-        <activity android:name=".VideoActivity"></activity>
+        <activity android:name=".AlermActivity"></activity>
+        <activity android:name=".SetActivity" />
+        <activity android:name=".VideoActivity" />
         <activity android:name=".Tab4ClickActivity" />
         <activity android:name=".NewClickActivity" />
         <activity android:name=".MapActivity" />
